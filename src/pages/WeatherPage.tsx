@@ -21,7 +21,7 @@ const WeatherPage = () => {
 
       {current && (
         <div className="mt-6">
-          <WeatherCard />
+          <WeatherCard data={current} />
         </div>
       )}
     </div>
