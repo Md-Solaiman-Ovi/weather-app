@@ -1,1 +1,7 @@
 @import "tailwindcss";
+
+
+body {
+  @apply bg-gradient-to-br from-purple-900 to-indigo-900 text-white min-h-screen;
+  font-family: 'Inter', sans-serif;
+}
