@@ -2,6 +2,47 @@
 
 
 body {
-  @apply bg-gradient-to-br from-purple-900 to-indigo-900 text-white min-h-screen;
+  @apply bg-gradient-to-br from-[rgba(30,27,75,1)] via-[rgba(88,28,135,1)] to-[rgba(30,27,75,1)] text-white min-h-screen bg-no-repeat bg-cover;
   font-family: 'Inter', sans-serif;
+}
+
+/* Daily Forecast Styles */
+.daily-forecast-container {
+  display: flex;
+  gap: 0.75rem; /* 12px */
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 0.75rem; /* space under scroll */
+}
+
+@media (min-width: 640px) {
+  .daily-forecast-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.5rem;
+    overflow-x: hidden;
+  }
+}
+
+.daily-card {
+  min-width: 88px;
+  flex-shrink: 0;
+  background: rgba(31, 27, 55, 0.5);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+/* Custom Scrollbar */
+.daily-forecast-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.daily-forecast-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.daily-forecast-container::-webkit-scrollbar-track {
+  background: transparent;
 }
